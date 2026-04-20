@@ -8,8 +8,8 @@ export default function VideoBlock() {
         {/* Main Wrapper */}
         <div className="relative">
 
-          {/* Dotted Pattern Bottom Left */}
-          <div className="absolute -bottom-10 left-10 w-[1500px] sm:w-[100%] h-[60px] sm:h-[90px] z-0 bg-[radial-gradient(#22D8E8_1.8px,transparent_1.8px)] [background-size:10px_10px]"></div>
+          {/* Dotted Pattern Bottom & Bottom Left */}
+          <div className="absolute -bottom-5 left-5 w-[1500px] sm:w-[100%] h-[40px] sm:h-[100px] z-0 bg-[radial-gradient(#22D8E8_1.8px,transparent_1.8px)] [background-size:10px_10px]"></div>
 
           {/* Video */}
           <div className="relative z-10">
