@@ -57,7 +57,8 @@ export default function KeepInTouchSection() {
   };
 
   return (
-    <section className="bg-[#F4F1EA] pt-14 sm:pt-16 md:pt-20 pb-0 overflow-hidden">
+    <section className="bg-[#F4F1EA] pt-14 sm:pt-16 md:pt-20 pb-0 overflow-hidden"
+    id="touch">
       <div className="max-w-[1450px] mx-auto px-4 sm:px-6 md:px-8">
 
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-14 items-center">
@@ -200,9 +201,6 @@ export default function KeepInTouchSection() {
           </div>
         </div>
       </div>
-
-      {/* Footer Strip */}
-      <div className="mt-10 sm:mt-14 md:mt-16 bg-[#22D8E8] h-14 sm:h-16 md:h-20"></div>
     </section>
   );
 }

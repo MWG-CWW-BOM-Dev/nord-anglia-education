@@ -4,144 +4,170 @@ import statsImg3 from "../assets/stats/stats3.jpg";
 
 export default function StatsSection() {
   return (
-    <section className="bg-[#072C63] text-white overflow-hidden rounded-bl-[60px] md:rounded-bl-[100px] py-0">
-      <div className="max-w-[1450px] mx-auto px-4 sm:px-6 md:px-10">
-        <div className="grid lg:grid-cols-2 gap-y-14 sm:gap-y-20 gap-x-12 items-center">
+    <section className="bg-[#072C63] text-white overflow-hidden rounded-bl-[60px] md:rounded-bl-[100px] mt-[-150px]">
+      <div className="max-w-[1450px] mx-auto">
 
-          {/* LEFT TOP CONTENT */}
-          <div>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight uppercase">
-              Deep Learning <br /> For Humans
+        {/* ── ROW 1: Text left | Image right ── */}
+        <div className="grid lg:grid-cols-2 items-center mt-20">
+
+          {/* Left: text */}
+          <div className="px-6 sm:px-10 md:px-16 py-16 md:py-24">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight uppercase">
+              Deep Learning<br />For Humans
             </h2>
 
-            <p className="mt-6 text-sm md:text-base leading-7 md:leading-8 text-white/80">
-              We combine world-class teaching and curricula with innovative
-              technology and modern facilities to create learning experiences like no
-              other. Through engaging lessons and meaningful challenges, students are
-              encouraged to explore ideas, ask questions, and think deeply every day.
+            <p className="mt-6 text-sm md:text-base leading-7 md:leading-8 text-white/75">
+              We combine world-class teaching and curricula with cutting-edge
+              technology and modern facilities to create learning experiences like
+              no other. We embed 'thinking routines' into daily learning, encouraging
+              students to pause, reflect and explain how they have been thinking,
+              rather than rushing to an answer. Simple routines like 'See, think,
+              wonder' inspire children to think more deeply at every opportunity.
             </p>
 
-            <p className="mt-5 text-sm md:text-base leading-7 md:leading-8 text-white/80">
-              This ability to pause, reflect, adjust, and try again is known as
-              metacognition. It helps children understand how they learn best,
-              strengthens problem-solving skills, and builds the confidence needed to
-              succeed both inside and outside the classroom.
+            <p className="mt-5 text-sm md:text-base leading-7 md:leading-8 text-white/75">
+              That ability – to pause, reflect, adjust, and try again – is known as
+              metacognition, and it has a dramatic impact on children's learning and
+              development.
             </p>
 
             <button
               onClick={() =>
-                document.getElementById("enquiry").scrollIntoView({
-                  behavior: "smooth",
-                })
+                document.getElementById("report")?.scrollIntoView({ behavior: "smooth" })
               }
-              className="mt-8 border border-cyan-400 text-cyan-400 px-6 sm:px-8 py-3 rounded-full text-sm md:text-base hover:bg-cyan-400 hover:text-[#072C63] transition"
+              className="mt-8 border border-cyan-400 text-cyan-400 px-7 py-3 rounded-full text-sm md:text-base hover:bg-cyan-400 hover:text-[#072C63] transition-all duration-200"
             >
-              ENQUIRE NOW
+              READ THE REPORT
             </button>
           </div>
 
-          {/* RIGHT TOP IMAGE */}
-          <div className="flex justify-center">
+          {/* Right: image bleeding to the right edge */}
+          <div className="relative flex justify-end items-center pr-0 py-10 md:py-0">
+            
             <img
               src={statsImg2}
               alt="student"
-              className="w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[460px] md:h-[460px] rounded-full object-cover"
+              className="w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] md:w-[480px] md:h-[480px] rounded-full object-cover"
+              style={{ marginRight: "-40px" }}
             />
           </div>
+        </div>
 
-          {/* LEFT BOTTOM IMAGE */}
-          <div className="flex justify-center">
+        {/* ── ROW 2: Image left (bleeding) | Stats circles right ── */}
+        <div className="grid lg:grid-cols-2 items-center">
+
+          {/* Left: large image bleeding to the left edge */}
+          <div className="relative flex justify-start items-center pl-0 py-10 md:py-0">
+            
             <img
               src={statsImg1}
               alt="student"
-              className="w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] md:w-[520px] md:h-[520px] rounded-full object-cover"
+              className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[520px] md:h-[520px] rounded-full object-cover"
+              style={{ marginLeft: "-40px" }}
             />
           </div>
 
-          {/* RIGHT STATS CIRCLES */}
-          <div className="relative h-[420px] sm:h-[500px] md:h-[550px] w-full flex justify-center items-center overflow-hidden">
+          {/* Right: overlapping stat circles */}
+          <div className="relative h-[420px] sm:h-[500px] md:h-[580px] flex items-center">
 
-            {/* BLUE CIRCLE */}
-            <div className="absolute top-[20px] left-[20px] sm:left-[60px] md:left-[80px] w-[150px] h-[150px] sm:w-[190px] sm:h-[190px] md:w-[210px] md:h-[210px] rounded-full bg-[#B8F2FF] text-[#072C63] flex flex-col justify-center items-center text-center z-20">
-              <span className="text-3xl sm:text-5xl md:text-6xl font-bold leading-none">+20%</span>
-              <span className="text-lg sm:text-2xl md:text-3xl font-medium mt-1">Curiosity</span>
+            {/* LIGHT BLUE CIRCLE – top left */}
+            <div
+              className="absolute z-20 rounded-full bg-[#B8F2FF] text-[#072C63] flex flex-col justify-center items-center text-center"
+              style={{
+                width: "clamp(130px, 22vw, 210px)",
+                height: "clamp(130px, 22vw, 210px)",
+                top: "10%",
+                left: "0%",
+              }}
+            >
+              <span className="text-4xl sm:text-5xl md:text-6xl font-bold leading-none">+20%</span>
+              <span className="text-base sm:text-xl md:text-2xl font-semibold mt-1">Curiosity</span>
             </div>
 
-            {/* YELLOW CIRCLE */}
-            <div className="absolute top-[110px] left-[120px] sm:left-[190px] md:top-[130px] md:left-[230px] w-[210px] h-[210px] sm:w-[250px] sm:h-[250px] md:w-[280px] md:h-[280px] rounded-full bg-[#FFD400] text-[#072C63] flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-8 z-10">
-              <span className="text-4xl sm:text-6xl md:text-7xl font-bold leading-none">96%</span>
-
-              <p className="text-[10px] sm:text-[13px] md:text-[16px] leading-4 sm:leading-5 mt-2 md:mt-3 font-medium">
-                By the end of the research,
-                <br />
-                up to 96% of teachers
-                <br />
-                agreed that this way of
-                <br />
-                teaching and learning
-                <br />
-                helps students succeed -
-                <br />
-                not just academically,
-                <br />
+            {/* YELLOW CIRCLE – center / overlapping */}
+            <div
+              className="absolute z-10 rounded-full bg-[#FFD400] text-[#072C63] flex flex-col justify-center items-center text-center px-5"
+              style={{
+                width: "clamp(180px, 30vw, 280px)",
+                height: "clamp(180px, 30vw, 280px)",
+                top: "20%",
+                left: "28%",
+              }}
+            >
+              <span className="text-5xl sm:text-6xl md:text-7xl font-bold leading-none">96%</span>
+              <p className="text-[10px] sm:text-xs md:text-sm leading-4 sm:leading-5 mt-2 font-medium">
+                By the end of the research,<br />
+                up to 96% of teachers<br />
+                agreed that this way of<br />
+                teaching and learning<br />
+                helps students succeed -<br />
+                not just academically,<br />
                 beyond school.
               </p>
             </div>
 
-            {/* PINK CIRCLE */}
-            <div className="absolute top-[250px] left-[10px] sm:left-[20px] md:top-[270px] md:left-[30px] w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[250px] md:h-[250px] rounded-full bg-[#FF3E73] text-white flex flex-col justify-center items-center text-center px-4 sm:px-5 z-30">
-              <span className="text-base sm:text-xl md:text-2xl">At least</span>
-
-              <span className="text-4xl sm:text-6xl md:text-7xl font-bold leading-none mt-1">40%</span>
-
-              <span className="text-lg sm:text-2xl md:text-3xl font-medium leading-tight mt-1">
-                growth across
-                <br />
-                all skills
+            {/* RED/PINK CIRCLE – bottom left, overlapping both */}
+            <div
+              className="absolute z-30 rounded-full bg-[#FF3E73] text-white flex flex-col justify-center items-center text-center px-4"
+              style={{
+                width: "clamp(160px, 26vw, 250px)",
+                height: "clamp(160px, 26vw, 250px)",
+                bottom: "8%",
+                left: "2%",
+              }}
+            >
+              <span className="text-sm sm:text-base md:text-lg font-medium">At least</span>
+              <span className="text-5xl sm:text-6xl md:text-7xl font-bold leading-none">40%</span>
+              <span className="text-sm sm:text-lg md:text-xl font-semibold leading-tight mt-1">
+                growth across<br />all skills
               </span>
             </div>
 
           </div>
+        </div>
 
-          {/* LEFT TEXT */}
-          <div>
-            <p className="mt-6 text-sm md:text-base leading-7 md:leading-8 text-white/80">
+        {/* ── ROW 3: Text left | Image right (bleeding) ── */}
+        <div className="grid lg:grid-cols-2 items-center">
+
+          {/* Left: text */}
+          <div className="px-6 sm:px-10 md:px-16 py-16 md:py-24">
+            <p className="text-sm md:text-base leading-7 md:leading-8 text-white/75">
               In the classroom, questions became more thoughtful, explanations became
-              clearer, and students showed greater determination when faced with
-              challenges. They learned to pause, reflect, and explore different ways
-              of solving problems, helping them build confidence and independence in
-              their everyday learning journey.
+              clearer, and there was a greater determination to keep going when things
+              felt difficult. Perhaps most importantly of all, children reported feeling
+              more confident when navigating uncertainty.
             </p>
 
-            <p className="mt-5 text-sm md:text-base leading-7 md:leading-8 text-white/80">
-              The lesson is clear: children still need to learn how to think, not
-              just what to think. By developing curiosity, resilience, and
-              self-awareness, students gain lifelong skills that prepare them to
-              adapt, make better decisions, and succeed in a rapidly changing world.
+            <p className="mt-5 text-sm md:text-base leading-7 md:leading-8 text-white/75">
+              The lesson is clear. Children still need to learn how to think. Not just
+              to succeed in exams, and not just to keep up with change. But to face
+              uncertainty with confidence, to make decisions without shortcuts, and to
+              believe they can work things out, even when the answer isn't immediate.
+              These are lifelong skills we're helping students to develop. And they're
+              the skills AI can't match.
             </p>
 
             <button
               onClick={() =>
-                document.getElementById("enquiry").scrollIntoView({
-                  behavior: "smooth",
-                })
+                document.getElementById("touch")?.scrollIntoView({ behavior: "smooth" })
               }
-              className="mt-8 border border-cyan-400 text-cyan-400 px-6 sm:px-8 py-3 rounded-full text-sm md:text-base hover:bg-cyan-400 hover:text-[#072C63] transition"
+              className="mt-8 border border-cyan-400 text-cyan-400 px-7 py-3 rounded-full text-sm md:text-base hover:bg-cyan-400 hover:text-[#072C63] transition-all duration-200"
             >
-              ENQUIRE NOW
+              KEEP IN TOUCH
             </button>
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center">
+          {/* Right: image bleeding right */}
+          <div className="relative flex justify-end items-center pr-0 py-10 md:py-0">
             <img
               src={statsImg3}
               alt="student"
-              className="w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[460px] md:h-[460px] rounded-full object-cover"
+              className="w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] md:w-[480px] md:h-[480px] rounded-full object-cover"
+              style={{ marginRight: "-40px" }}
             />
           </div>
-
         </div>
+
       </div>
     </section>
   );
