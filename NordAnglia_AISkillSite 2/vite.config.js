@@ -7,7 +7,22 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    viteSingleFile()
+    viteSingleFile({ useRecommendedBuildConfig: false })
   ],
+  build: {
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        entryFileNames: '[name]-[hash].js',
+        chunkFileNames: '[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo?.name?.endsWith('.css')) {
+            return '[name]-[hash].[ext]';
+          }
+          return 'assets/[name]-[hash].[ext]';
+        }
+      }
+    }
+  },
   base: './',
 })

@@ -4,7 +4,7 @@ export default function EnquirySection() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
-      "//nordangliaeducation.tfaforms.net/js/iframe_resize_helper.js";
+      "https://nordangliaeducation.tfaforms.net/js/iframe_resize_helper.js";
     script.async = true;
     document.body.appendChild(script);
 
