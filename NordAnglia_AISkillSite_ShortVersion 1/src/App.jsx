@@ -8,9 +8,10 @@ function App() {
     <>
       <Hero />
       <VideoBlock />
-      <CarouselSection />
-      <EnquirySection />
-
+      <div className="bg-lightblue">
+        <CarouselSection />
+        <EnquirySection />
+      </div>
     </>
   );
 }

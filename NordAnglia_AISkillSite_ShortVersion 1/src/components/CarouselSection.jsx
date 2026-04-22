@@ -9,6 +9,7 @@ import card1 from "../assets/final-approved/BISB_Bratislava_Oct  2024_342.png";
 import card2 from "../assets/final-approved/OIC_Oxford_Sept 2025_023.png";
 import card3 from "../assets/final-approved/Image_NAISAK_Al Khor_2024_072.png";
 import card4 from "../assets/final-approved/ICS_Madrid_Sept_ 2025 (36).png";
+import videoPattern from "../assets/video-pattern.png";
 
 export default function CarouselSection() {
   const cards = [
@@ -19,7 +20,9 @@ export default function CarouselSection() {
   ];
 
   return (
-    <section className="bg-[#0D3155] pt-16 pb-8 sm:pt-20 lg:pt-24 relative overflow-hidden ml-[50px]">
+    <section id="carousel" className="bg-[#0D3155] pt-16 pb-8 sm:pt-20 lg:pt-24 relative overflow-hidden ml-[50px] carousel-section"
+      style={{ '--bg-pattern': `url(${videoPattern})` }}
+    >
       <div className="max-w-[1320px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between mb-10 sm:mb-14 ">
           <div>

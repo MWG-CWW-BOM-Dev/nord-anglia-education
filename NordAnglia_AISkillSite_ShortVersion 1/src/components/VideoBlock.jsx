@@ -1,9 +1,10 @@
 import videoSrc from "../assets/video.mp4";
 import thumbnailSrc from "../assets/thumbnail.png";
+import videoPattern from "../assets/video-pattern.png";
 
 export default function VideoBlock() {
   return (
-    <section className="bg-white py-8 sm:py- 10 md:py-16 overflow-hidden">
+    <section className="bg-white py-8 sm:py- 10 md:py-16 overflow-hidden" style={{ '--bg-pattern': `url(${videoPattern})` }}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
 
         {/* Main Wrapper */}

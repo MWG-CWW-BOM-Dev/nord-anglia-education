@@ -10,10 +10,10 @@ export default defineConfig({
     tailwindcss(),
     viteSingleFile({ useRecommendedBuildConfig: false }),
     ViteImageOptimizer({
-      png: { quality: 80 },
-      jpeg: { quality: 80 },
-      jpg: { quality: 80 },
-      webp: { quality: 80 },
+      png: { quality: 85, compressionLevel: 8 },
+      jpeg: { quality: 85 },
+      jpg: { quality: 85 },
+      webp: { quality: 85 },
     })
   ],
   build: {
