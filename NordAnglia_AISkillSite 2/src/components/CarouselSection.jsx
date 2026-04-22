@@ -9,6 +9,7 @@ import card1 from "../assets/final-approved/BISB_Bratislava_Oct  2024_342.png";
 import card2 from "../assets/final-approved/OIC_Oxford_Sept 2025_023.png";
 import card3 from "../assets/final-approved/Image_NAISAK_Al Khor_2024_072.png";
 import card4 from "../assets/final-approved/ICS_Madrid_Sept_ 2025 (36).png";
+import videoPattern from "../assets/video-pattern.png";
 
 export default function CarouselSection() {
   const cards = [
@@ -19,7 +20,10 @@ export default function CarouselSection() {
   ];
 
   return (
-    <section className="bg-[#1AAFC0] py-16 relative overflow-hidden carousel-section">
+    <section 
+      className="bg-[#1AAFC0] py-16 relative overflow-hidden carousel-section"
+      style={{ '--bg-pattern': `url(${videoPattern})` }}
+    >
       {/* DOT DESIGN TOP LEFT */}
       <div className="absolute top-0 left-0 w-[360px] h-[70px]" />
 

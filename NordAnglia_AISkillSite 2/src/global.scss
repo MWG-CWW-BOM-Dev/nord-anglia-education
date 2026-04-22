@@ -34,11 +34,20 @@ $backgroundColor: #F9F5EC;
     padding: 30px 50px;
   }
 
+  @media screen and (max-width: 1170px) {
+    padding: 30px 30px;
+    bottom: 20px;
+  }
+
   @media screen and (max-width: 600px) {
     padding: 30px 30px;
   }
 
   h3 {
+    @media screen and (max-width: 1125px) {
+      font-size: 20px;
+    }
+
     @media screen and (max-width: 768px) {
       font-size: 22px;
     }
@@ -51,17 +60,37 @@ $backgroundColor: #F9F5EC;
   .grid {
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
+    }
 
-      p {
-        @media screen and (max-width: 600px) {
-          font-size: 15px;
-          line-height: 18px;
-        }
+    p {
+      @media screen and (max-width: 600px) {
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      @media screen and (max-width: 1364px) {
+        font-size: 15px;
+        line-height: 20px;
       }
     }
   }
 
   .enquire-now {
+
+    @media screen and (max-width: 1364px) {
+      margin-top: 15px;
+    }
+
+    @media screen and (max-width: 1125px) {
+      font-size: 20px;
+
+      button {
+        font-size: 15px;
+        padding: 10px 20px;
+      }
+
+    }
+
     @media screen and (max-width: 600px) {
       margin-top: 15px;
     }
@@ -159,6 +188,13 @@ $backgroundColor: #F9F5EC;
       width: 880px;
     }
 
+    @media screen and (max-width: 800px) {
+      position: absolute;
+      top: -200px;
+      right: -400px;
+      width: 880px;
+    }
+
     @media screen and (max-width: 600px) {
       position: absolute;
       top: -170px;
@@ -182,7 +218,7 @@ $backgroundColor: #F9F5EC;
     bottom: -33px;
     left: 34px;
     overflow: hidden;
-    background-image: url(/src/assets/video-pattern.png);
+    background-image: var(--bg-pattern);
     background-size: cover;
     z-index: -1;
     background-position: 0px 0px;
@@ -536,6 +572,7 @@ $backgroundColor: #F9F5EC;
 .carousel-section {
   overflow: visible;
   margin: 100px 0px 0px 0px;
+  padding: 100px 0px;
 
   h2 {
     @media screen and (max-width: 600px) {
@@ -552,7 +589,7 @@ $backgroundColor: #F9F5EC;
     top: -89px;
     left: 0px;
     overflow: hidden;
-    background-image: url(/src/assets/video-pattern.png);
+    background-image: var(--bg-pattern);
     background-size: 400%;
     z-index: -1;
     background-position: 0px 0px;

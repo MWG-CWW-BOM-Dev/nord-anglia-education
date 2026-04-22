@@ -28,9 +28,20 @@ body {
     padding: 30px 50px;
   }
 }
+@media screen and (max-width: 1170px) {
+  .hero-bottom-content {
+    padding: 30px 30px;
+    bottom: 20px;
+  }
+}
 @media screen and (max-width: 600px) {
   .hero-bottom-content {
     padding: 30px 30px;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .hero-bottom-content h3 {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -48,10 +59,30 @@ body {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .hero-bottom-content .grid p {
     font-size: 15px;
     line-height: 18px;
+  }
+}
+@media screen and (max-width: 1364px) {
+  .hero-bottom-content .grid p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 1364px) {
+  .hero-bottom-content .enquire-now {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .hero-bottom-content .enquire-now {
+    font-size: 20px;
+  }
+  .hero-bottom-content .enquire-now button {
+    font-size: 15px;
+    padding: 10px 20px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -157,6 +188,14 @@ body {
     width: 880px;
   }
 }
+@media screen and (max-width: 800px) {
+  .hero-section .header-pattern {
+    position: absolute;
+    top: -200px;
+    right: -400px;
+    width: 880px;
+  }
+}
 @media screen and (max-width: 600px) {
   .hero-section .header-pattern {
     position: absolute;
@@ -177,7 +216,7 @@ body {
   bottom: -33px;
   left: 34px;
   overflow: hidden;
-  background-image: url(/src/assets/video-pattern.png);
+  background-image: var(--bg-pattern);
   background-size: cover;
   z-index: -1;
   background-position: 0px 0px;
@@ -510,6 +549,7 @@ body {
 .carousel-section {
   overflow: visible;
   margin: 100px 0px 0px 0px;
+  padding: 100px 0px;
 }
 @media screen and (max-width: 600px) {
   .carousel-section h2 {
@@ -525,7 +565,7 @@ body {
   top: -89px;
   left: 0px;
   overflow: hidden;
-  background-image: url(/src/assets/video-pattern.png);
+  background-image: var(--bg-pattern);
   background-size: 400%;
   z-index: -1;
   background-position: 0px 0px;
