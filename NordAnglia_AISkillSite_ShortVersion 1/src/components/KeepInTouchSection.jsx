@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import contactImg from "../assets/contact.jpg";
+import contactImg from "../assets/final-approved/Group 163.png";
 
 export default function KeepInTouchSection() {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
-      "https://nordangliaeducation.tfaforms.net/js/iframe_resize_helper.js";
+      "//nordangliaeducation.tfaforms.net/js/iframe_resize_helper.js";
     script.async = true;
     document.body.appendChild(script);
 
@@ -16,56 +16,52 @@ export default function KeepInTouchSection() {
 
   return (
     <section
-      className="bg-[#F4F1EA] pt-14 sm:pt-16 md:pt-20 pb-0 overflow-hidden"
       id="touch"
+      className="bg-[#F4F1EA] py-16 md:py-24 overflow-hidden relative"
     >
-      <div className="max-w-[1450px] mx-auto px-4 sm:px-6 md:px-8">
+    
 
-        <div className="grid lg:grid-cols-2 gap-10 sm:gap-14 items-center">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
           {/* LEFT IMAGE */}
-          <div className="relative flex justify-center lg:justify-start">
+          <div className="relative flex justify-center lg:justify-start ">
             <img
               src={contactImg}
               alt="Student"
-              className="relative z-10 w-[240px] h-[240px] sm:w-[360px] sm:h-[360px] md:w-[520px] md:h-[520px] lg:w-[620px] lg:h-[620px] rounded-full object-cover"
+              className="relative right-75 w-[280px] h-[280px] sm:w-[420px] sm:h-[420px] md:w-[500px] md:h-[500px] lg:w-[700px] lg:h-[700px] rounded-full object-cover"
             />
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="pb-10">
+          <div className="relative right-30 ">
 
-            <h2 className="text-[#0B1E4F] text-3xl sm:text-4xl md:text-6xl font-light uppercase leading-tight">
-              Keep In Touch
+            <h2 className="text-[#0B1E4F] text-[34px] sm:text-[42px] md:text-[52px] font-light uppercase leading-none">
+              KEEP IN TOUCH
             </h2>
 
-            <p className="mt-4 sm:mt-5 text-[#0B1E4F]/80 text-sm sm:text-base md:text-xl leading-7 md:leading-8 max-w-[620px]">
+            <p className="mt-3 text-[#0B1E4F]/80 text-sm sm:text-base leading-6 max-w-[520px]">
               Enter your details to keep up to date with developments in
-              education and research for your child.
+              education and research for your child
             </p>
 
-            {/* Form Box */}
-            <div className="mt-8 sm:mt-10 border-[3px] md:border-4 border-[#22D8E8] rounded-[20px] sm:rounded-[24px] md:rounded-[28px] overflow-hidden bg-white">
+            {/* FORM BOX */}
+            <div className="mt-8 bg-white rounded-[8px] p-5 shadow-sm max-w-[520px]">
 
-              {/* Iframe Form */}
-              <div className="p-4 sm:p-6 md:p-8">
-                <p>
-                  <iframe
-                    title="Keep In Touch Form"
-                    formid="admissions_form"
-                    frameBorder="0"
-                    height="auto"
-                    id="formassembly_form"
-                    src="https://nordangliaeducation.tfaforms.net/4748620"
-                    width="100%"
-                    className="w-full min-h-[900px]"
-                  ></iframe>
-                </p>
-              </div>
+              <iframe
+                title="Keep In Touch Form"
+                formid="admissions_form"
+                frameBorder="0"
+                id="formassembly_form"
+                src="https://nordangliaeducation.tfaforms.net/4748620"
+                width="100%"
+                className="w-full min-h-[430px]"
+              ></iframe>
 
             </div>
-
           </div>
+
         </div>
       </div>
     </section>

@@ -1,86 +1,91 @@
-import heroImg from "../assets/hero.jpg";
+import heroImg from "../assets/final-approved/Group 158.png";
+import heroImgMobile from "../assets/final-approved/hero-mobile.png";
+import Circle from "../assets/final-approved/lines-pattern.png";
+import stars from "../assets/hero-stars.png";
 
 export default function Hero() {
   return (
-    <section className="bg-[#2fd6e7] pt-20 overflow-hidden rounded-br-[120px]">
-      <div className="max-w-[1900px] mx-auto" >
+    <section className="bg-[#2fd6e7]  overflow-hidden">
+      <div className="max-w-[2560px] mx-auto">
 
-        {/* Main Hero Box */}
-        <div className="bg-[#28D8E8] rounded-br-[120px] px-4 md:px-8 lg:px-12 pt-6 pb-10 relative ">
+        {/* TOP TITLE */}
+        <div className="px-4 sm:px-6 md:px-8 lg:px-10 pt-100 relative z-20 hero-section">
+          <img src={Circle} alt="Pattern" className="header-pattern" />
+          <img src={stars} alt="Pattern" className="header-stars-pattern" />
+          <h1 className="hero-title text-center">SKILLS <span className="hero-title-ai">AI</span><span className="hero-title-cant-match"> CAN’T MATCH</span></h1>
+        </div>
 
-          {/* Top Heading */}
-          <div className="relative z-20 leading-none " >
+        {/* IMAGE SECTION */}
+        <div className="bg-[#2fd6e7] rounded-br-[120px] overflow-hidden -mt-8 ">
 
-            {/* Skills */}
-            <span className="block text-[#082C63] font-bold text-[70px] sm:text-[90px] md:text-[140px] lg:text-[180px]">
-              Skills
-            </span>
+          <div className="relative">
 
-            {/* AI CAN’T MATCH */}
-            <span className="absolute left-[180px] sm:left-[220px] md:left-[320px] lg:left-[480px] top-[40px] sm:top-[55px] md:top-[88px] lg:top-[100px] text-white font-semibold text-[32px] sm:text-[46px] md:text-[72px] lg:text-[100px] whitespace-nowrap z-30">
-              AI CAN’T MATCH
-            </span>
-
-          </div>
-
-          {/* Hero Image */}
-          <div className="-mt-4 relative z-10">
             <img
               src={heroImg}
               alt="Student"
-              className="w-full h-[180px] sm:h-[320px] md:h-[500px] lg:h-[760px] object-cover rounded-tl-[80px]"
+              className="w-full object-cover desktop-only"
+            />
+            <img
+              src={heroImgMobile}
+              alt="Student"
+              className="w-full object-cover mobile-only"
             />
 
-            {/* Capsule Text */}
-            <div className="absolute inset-0 flex items-center justify-center px-4">
-              <div className="border-2 border-white rounded-full px-8 sm:px-14 md:px-24 py-3 md:py-5 text-white font-semibold text-[24px] sm:text-[36px] md:text-[58px] lg:text-[72px] backdrop-blur-[2px]">
-                Think unprompted
+            {/* BOTTOM CONTENT */}
+            <div className="bg-[#2fd6e7]/95 backdrop-blur-sm px-6 sm:px-10 md:px-14 lg:px-20 py-8 md:py-10 lg:py-12 rounded-br-[120px] absolute z-0 bottom-[50px] w-[90%] hero-bottom-content">
+
+              {/* Heading */}
+              <h3 className="text-white font-light uppercase tracking-wide text-[20px] sm:text-[28px] md:text-[38px] lg:text-[30px] leading-[1.15] mb-8">
+                IN AN AI WORLD, HOW WILL YOUR CHILD LEARN TO THINK?
+              </h3>
+
+              {/* Content Grid */}
+              <div className="grid md:grid-cols-2 gap-8 lg:gap-12 text-[#08306a] text-[15px] md:text-[18px] leading-8">
+
+                {/* Left Text */}
+                <p>
+                  Artificial intelligence is transforming how we learn, work, and
+                  solve problems. Answers are faster, easier, and everywhere. But
+                  when answers are instant, something else matters more than ever:
+                  your child’s ability to think independently, question deeply,
+                  and adapt with confidence.
+                  <br /><br />
+                  At Nord Anglia Education, this isn’t just theory. It’s what we
+                  know works.
+                </p>
+
+                {/* Right Text */}
+                <p>
+                  We partnered with{" "}
+                  <span className="font-bold">Boston College</span> on a{" "}
+                  <span className="font-bold">
+                    two-year global research project involving over 12,000 of our students
+                  </span>{" "}
+                  to understand how children develop the skills they need for the future.
+                  <br /><br />
+                  The results showed clear, measurable growth in the skills AI
+                  can’t replicate.{" "}
+                  <a
+                    href="#"
+                    className="font-bold text-blue-700 underline hover:text-blue-900 transition"
+                  >
+                    Find out more here
+                  </a>
+                </p>
               </div>
-            </div>
-          </div>
 
-          {/* Bottom Content */}
-          <div className="bg-[#2fd6e7] px-6 sm:px-10 md:px-16 lg:px-24 py-10 lg:py-14 rounded-br-[120px]">
-
-            {/* Title */}
-            <h3 className="text-white text-start font-light uppercase tracking-wide text-[20px] sm:text-[28px] md:text-[38px] lg:text-[36px] mb-8">
-              IN AN AI WORLD, HOW WILL YOUR CHILD LEARN TO THINK?
-            </h3>
-
-            {/* Paragraphs */}
-            <div className="grid md:grid-cols-2 gap-8 text-[#08306a] text-sm md:text-base leading-7 max-w-[1300px] mx-auto">
-              <p>
-                We know AI is transforming the world, enabling us to get answers
-                faster than ever. But this raises some big questions. When answers are
-                everywhere, will children still be able to think for themselves? Will
-                they compete with AI, or direct it? What will their role be?
-              </p>
-
-              <p>
-                At Nord Anglia, we pride ourselves on teaching skills AI can’t
-                match. By making your child more conscious of the way they
-                think, learn and solve problems, we help them develop the human
-                qualities they will need in the future.
-              </p>
-            </div>
-
-            {/* Button */}
-            <div className="mt-10 flex justify-start md:justify-self-start">
-              <button
-                onClick={() =>
-                  document.getElementById("enquiry")?.scrollIntoView({
-                    behavior: "smooth",
-                  })
-                }
-                className="bg-[#082c63] text-white px-8 md:px-10 py-3 rounded-full text-xs md:text-sm font-semibold tracking-wide hover:scale-105 transition duration-300"
-              >
-                ENQUIRE NOW
-              </button>
+              {/* Button */}
+              <div className="mt-10 enquire-now">
+                <button className="bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-semibold tracking-wide hover:scale-105 transition duration-300">
+                  ENQUIRE NOW
+                </button>
+              </div>
             </div>
 
           </div>
         </div>
+
       </div>
     </section>
   );
-} 
+}

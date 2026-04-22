@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && node prerender.mjs",
+    "dev": "sass --watch src/global.scss:src/global.css & vite",
+    "build": "sass src/global.scss:src/global.css && vite build && node prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -30,8 +30,12 @@
     "postcss": "^8.5.10",
     "prettier": "^3.8.3",
     "puppeteer-core": "^24.42.0",
+    "sass": "^1.83.0",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.4",
     "vite-plugin-singlefile": "^2.3.3"
+  },
+  "reactSnap": {
+    "source": "dist"
   }
 }

@@ -3,8 +3,8 @@ import VideoBlock from "./components/VideoBlock";
 import StatsSection from "./components/StatsSection";
 import EnquirySection from "./components/EnquirySection";
 import CarouselSection from "./components/CarouselSection";
-import ReadReportSection from "./components/ReadReportSection";
 import KeepInTouchSection from "./components/KeepInTouchSection";
+import Info from "./components/info";
 
 function App() {
   return (
@@ -12,11 +12,11 @@ function App() {
       <Hero />
       <VideoBlock />
       <StatsSection />
-      <EnquirySection/>
-      <CarouselSection/>
-      <ReadReportSection/>
-      <KeepInTouchSection/>
-    
+      <Info />
+      <CarouselSection />
+      <EnquirySection />
+      {/* <KeepInTouchSection/> */}
+
     </>
   );
 }
