@@ -4,6 +4,7 @@ import StatsSection from "./components/StatsSection";
 import EnquirySection from "./components/EnquirySection";
 import CarouselSection from "./components/CarouselSection";
 import KeepInTouchSection from "./components/KeepInTouchSection";
+import Info from "./components/info";
 
 function App() {
   return (
@@ -11,10 +12,11 @@ function App() {
       <Hero />
       <VideoBlock />
       <StatsSection />
-      <CarouselSection/>
-      <EnquirySection/>
-      <KeepInTouchSection/>
-    
+      <Info />
+      <CarouselSection />
+      <EnquirySection />
+      {/* <KeepInTouchSection/> */}
+
     </>
   );
 }

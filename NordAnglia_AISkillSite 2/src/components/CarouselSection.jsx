@@ -19,9 +19,9 @@ export default function CarouselSection() {
   ];
 
   return (
-    <section className="bg-[#1AAFC0] py-16 relative overflow-hidden">
+    <section className="bg-[#1AAFC0] py-16 relative overflow-hidden carousel-section">
       {/* DOT DESIGN TOP LEFT */}
-      <div className="absolute top-0 left-0 w-[360px] h-[70px] bg-[radial-gradient(#2FE4F3_2px,transparent_2px)] [background-size:16px_16px]" />
+      <div className="absolute top-0 left-0 w-[360px] h-[70px]" />
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-16 relative z-10">
         {/* HEADING + ARROWS */}
@@ -59,6 +59,7 @@ export default function CarouselSection() {
             prevEl: ".prevBtn",
             nextEl: ".nextBtn",
           }}
+          loop={true}
           spaceBetween={18}
           slidesPerView={1.2}
           breakpoints={{
@@ -67,7 +68,7 @@ export default function CarouselSection() {
             1400: { slidesPerView: 4.2 },
           }}
         >
-          {cards.map((card, i) => (
+          {[...cards, ...cards, ...cards].map((card, i) => (
             <SwiperSlide key={i}>
               <div className="bg-white rounded-xl overflow-hidden shadow-md">
                 <img
@@ -87,7 +88,7 @@ export default function CarouselSection() {
         </Swiper>
 
         {/* BUTTON */}
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <button
            onClick={() =>
                     document
@@ -97,7 +98,7 @@ export default function CarouselSection() {
            className="bg-[#0B1E4F] text-white px-10 py-4 rounded-full font-semibold tracking-wide hover:scale-105 transition">
             FOUND OUT MORE
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

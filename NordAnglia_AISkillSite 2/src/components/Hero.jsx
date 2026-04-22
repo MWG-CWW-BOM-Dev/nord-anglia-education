@@ -1,5 +1,7 @@
 import heroImg from "../assets/final-approved/Group 158.png";
-import Circle from"../assets/final-approved/lines-pattern.png";
+import heroImgMobile from "../assets/final-approved/hero-mobile.png";
+import Circle from "../assets/final-approved/lines-pattern.png";
+import stars from "../assets/hero-stars.png";
 
 export default function Hero() {
   return (
@@ -7,24 +9,10 @@ export default function Hero() {
       <div className="max-w-[2560px] mx-auto">
 
         {/* TOP TITLE */}
-        <div className="px-4 sm:px-6 md:px-8 lg:px-10 pt-100 relative z-20">
-          <img
-          src={Circle}
-              alt="Pattern"
-              className="header-pattern"
-          />
-          <div className="relative inline-block">
-            <h1 className="font-bold uppercase leading-none text-[52px] sm:text-[80px] md:text-[120px] lg:text-[120px] ">
-
-              {/* SKILLS */}
-              <span className="text-[#082C63]">SKILLS</span>
-
-              {/* AI */}
-              <span className="text-white ml-8">AI</span>
-              <span className="text-white font-semibold uppercase leading-none text-[52px] sm:text-[80px] md:text-[120px] lg:text-[100px]" > CAN’T MATCH</span>
-            </h1>
-          </div>
-
+        <div className="px-4 sm:px-6 md:px-8 lg:px-10 pt-100 relative z-20 hero-section">
+          <img src={Circle} alt="Pattern" className="header-pattern" />
+          <img src={stars} alt="Pattern" className="header-stars-pattern" />
+          <h1 className="hero-title text-center">SKILLS <span className="hero-title-ai">AI</span><span className="hero-title-cant-match"> CAN’T MATCH</span></h1>
         </div>
 
         {/* IMAGE SECTION */}
@@ -35,11 +23,16 @@ export default function Hero() {
             <img
               src={heroImg}
               alt="Student"
-              className="w-full object-cover "
+              className="w-full object-cover desktop-only"
+            />
+            <img
+              src={heroImgMobile}
+              alt="Student"
+              className="w-full object-cover mobile-only"
             />
 
             {/* BOTTOM CONTENT */}
-            <div className="bg-[#2fd6e7]/95 backdrop-blur-sm px-6 sm:px-10 md:px-14 lg:px-20 py-8 md:py-10 lg:py-12 rounded-br-[120px] absolute z-0 bottom-[50px] w-[90%]">
+            <div className="bg-[#2fd6e7]/95 backdrop-blur-sm px-6 sm:px-10 md:px-14 lg:px-20 py-8 md:py-10 lg:py-12 rounded-br-[120px] absolute z-0 bottom-[50px] w-[90%] hero-bottom-content">
 
               {/* Heading */}
               <h3 className="text-white font-light uppercase tracking-wide text-[20px] sm:text-[28px] md:text-[38px] lg:text-[30px] leading-[1.15] mb-8">
@@ -82,15 +75,8 @@ export default function Hero() {
               </div>
 
               {/* Button */}
-              <div className="mt-10">
-                <button
-                  onClick={() =>
-                    document
-                      .getElementById("enquiry")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-semibold tracking-wide hover:scale-105 transition duration-300"
-                >
+              <div className="mt-10 enquire-now">
+                <button className="bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-semibold tracking-wide hover:scale-105 transition duration-300">
                   ENQUIRE NOW
                 </button>
               </div>

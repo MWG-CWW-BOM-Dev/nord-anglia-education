@@ -1,4 +1,5 @@
-import videoFile from "../assets/final-approved/Group 164.png";
+import videoSrc from "../assets/video.mp4";
+import thumbnailSrc from "../assets/thumbnail.png";
 
 export default function VideoBlock() {
   return (
@@ -8,18 +9,22 @@ export default function VideoBlock() {
         {/* Main Wrapper */}
         <div className="relative">
 
-          {/* Dotted Pattern Bottom & Bottom Left */}
-          {/* <div className="absolute -bottom-5 left-5 w-[1500px] sm:w-[100%] h-[40px] sm:h-[100px] z-0 bg-[radial-gradient(#22D8E8_1.8px,transparent_1.8px)] [background-size:10px_10px]"></div> */}
-
           {/* Video */}
-          <div className="relative z-10">
-            <img
-              src={videoFile}
-              className="w-full h-[220px] sm:h-[420px] md:h-[620px] object-cover "
-             
-            />
+          <div className="relative z-10 video-container">
+            <video
+              className="w-full h-[220px] sm:h-[420px] md:h-[620px] object-cover shadow-lg"
+              poster={thumbnailSrc}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls="true"
+              paused
+            >
+              <source src={videoSrc} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
-
         </div>
 
       </div>
