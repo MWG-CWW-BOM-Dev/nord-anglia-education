@@ -24,11 +24,52 @@ $backgroundColor: #F9F5EC;
 
   @media screen and (max-width: 991px) {
     display: block;
+
+    .hero-title {
+      font-size: 104px;
+      line-height: 90px;
+    }
+  }
+}
+
+.hero-title-ai-mobile {
+
+  @media screen and (max-width: 991px) {
+    display: block;
+    font-size: 70px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 40px;
+  }
+}
+
+header {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  padding: 15px 0px;
+
+  @media screen and (max-width: 1330px) {
+    padding: 15px 20px;
+  }
+
+  img {
+    max-width: 80px;
+    width: 100%;
+  }
+
+  button {
+
+    @media screen and (max-width: 600px) {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
   }
 }
 
 .hero-bottom-content {
-  padding-left: calc(100% - 85vw);
+  padding: 30px 30px 30px calc(100% - 85vw);
 
   @media screen and (max-width: 1414px) {
     padding: 30px 50px;
@@ -40,10 +81,16 @@ $backgroundColor: #F9F5EC;
   }
 
   @media screen and (max-width: 600px) {
-    padding: 30px 30px;
+    padding: 20px 30px;
   }
 
   h3 {
+    font-size: 28px;
+
+    @media screen and (max-width: 1448px) {
+      font-size: 25px;
+    }
+
     @media screen and (max-width: 1125px) {
       font-size: 20px;
     }
@@ -53,29 +100,36 @@ $backgroundColor: #F9F5EC;
     }
 
     @media screen and (max-width: 600px) {
-      font-size: 17px;
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 20px;
     }
   }
 
   .grid {
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
+      gap: 15px;
     }
 
     p {
-      @media screen and (max-width: 600px) {
-        font-size: 15px;
-        line-height: 18px;
-      }
+      font-size: 16px;
+      line-height: 22px;
 
       @media screen and (max-width: 1364px) {
         font-size: 15px;
         line-height: 20px;
       }
+
+      @media screen and (max-width: 600px) {
+        font-size: 12px;
+        line-height: 15px;
+      }
     }
   }
 
   .enquire-now {
+    margin-top: 30px;
 
     @media screen and (max-width: 1364px) {
       margin-top: 15px;
@@ -98,14 +152,14 @@ $backgroundColor: #F9F5EC;
 }
 
 .hero-section {
-  padding-top: 200px;
+  padding: 200px 0px 0px 0px;
 
   @media screen and (max-width: 1414px) {
     padding-top: 150px;
   }
 
   @media screen and (max-width: 991px) {
-    padding-top: 350px;
+    padding-top: 200px;
   }
 
   .header-stars-pattern {
@@ -127,17 +181,27 @@ $backgroundColor: #F9F5EC;
   }
 
   .hero-title {
-    font-weight: bold;
     text-transform: uppercase;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 600;
-    color: $accent;
-    font-size: 150px;
-    line-height: 100px;
+    color: #113052;
+    font-size: 100px;
+    line-height: 115px;
     position: relative;
+    width: 100%;
 
     @media screen and (max-width: 1414px) {
       font-size: 100px;
+      line-height: 90px;
+    }
+
+    @media screen and (max-width: 1330px) {
+      font-size: 79px;
+      line-height: 110px;
+    }
+
+    @media screen and (max-width: 991px) {
+      font-size: 104px;
       line-height: 90px;
     }
 
@@ -170,9 +234,9 @@ $backgroundColor: #F9F5EC;
 
   .header-pattern {
     position: absolute;
-    top: -580px;
-    right: -620px;
-    width: 1210px;
+    top: -660px;
+    right: -780px;
+    width: 1200px;
 
     @media screen and (max-width: 1414px) {
       position: absolute;
@@ -218,7 +282,7 @@ $backgroundColor: #F9F5EC;
     bottom: -33px;
     left: 34px;
     overflow: hidden;
-    background-image: url(./assets/video-pattern.png);
+    background-image: var(--bg-pattern);
     background-size: cover;
     z-index: -1;
     background-position: 0px 0px;
@@ -231,6 +295,10 @@ $backgroundColor: #F9F5EC;
 
   @media screen and (max-width: 1414px) {
     border-bottom-left-radius: 150px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 40px;
   }
 
   .stats1-parent {
@@ -254,7 +322,7 @@ $backgroundColor: #F9F5EC;
         }
 
         @media screen and (max-width: 768px) {
-          padding: 50px 50px;
+          padding: 100px 20px 0px 20px;
         }
       }
 
@@ -340,6 +408,7 @@ $backgroundColor: #F9F5EC;
 
         @media screen and (max-width: 768px) {
           order: 2;
+          padding: 0px;
         }
       }
 
@@ -367,12 +436,12 @@ $backgroundColor: #F9F5EC;
         @media screen and (max-width: 768px) {
           position: relative;
           top: 20px;
-          left: -150px;
+          left: -60px;
           transform: none;
         }
       }
 
-      .stats1-cta {
+      .stats2-cta {
         padding: 25px 70px;
         font-size: 18px;
         color: $cyan;
@@ -430,7 +499,7 @@ $backgroundColor: #F9F5EC;
         }
 
         @media screen and (max-width: 768px) {
-          padding: 50px 50px;
+          padding: 50px 20px 0px 20px;
         }
       }
 
@@ -589,7 +658,7 @@ $backgroundColor: #F9F5EC;
     top: -89px;
     left: 0px;
     overflow: hidden;
-    background-image: url(./assets/video-pattern.png);
+    background-image: var(--bg-pattern);
     background-size: 400%;
     z-index: -1;
     background-position: 0px 0px;

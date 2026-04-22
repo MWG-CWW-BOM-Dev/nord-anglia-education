@@ -18,10 +18,48 @@ body {
   .mobile-only {
     display: block;
   }
+  .mobile-only .hero-title {
+    font-size: 104px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero-title-ai-mobile {
+    display: block;
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero-title-ai-mobile {
+    font-size: 40px;
+  }
+}
+
+header {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  padding: 15px 0px;
+}
+@media screen and (max-width: 1330px) {
+  header {
+    padding: 15px 20px;
+  }
+}
+header img {
+  max-width: 80px;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  header button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
 }
 
 .hero-bottom-content {
-  padding-left: calc(100% - 85vw);
+  padding: 30px 30px 30px calc(100% - 85vw);
 }
 @media screen and (max-width: 1414px) {
   .hero-bottom-content {
@@ -36,7 +74,15 @@ body {
 }
 @media screen and (max-width: 600px) {
   .hero-bottom-content {
-    padding: 30px 30px;
+    padding: 20px 30px;
+  }
+}
+.hero-bottom-content h3 {
+  font-size: 28px;
+}
+@media screen and (max-width: 1448px) {
+  .hero-bottom-content h3 {
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 1125px) {
@@ -51,25 +97,35 @@ body {
 }
 @media screen and (max-width: 600px) {
   .hero-bottom-content h3 {
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 768px) {
   .hero-bottom-content .grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 }
-@media screen and (max-width: 600px) {
-  .hero-bottom-content .grid p {
-    font-size: 15px;
-    line-height: 18px;
-  }
+.hero-bottom-content .grid p {
+  font-size: 16px;
+  line-height: 22px;
 }
 @media screen and (max-width: 1364px) {
   .hero-bottom-content .grid p {
     font-size: 15px;
     line-height: 20px;
   }
+}
+@media screen and (max-width: 600px) {
+  .hero-bottom-content .grid p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.hero-bottom-content .enquire-now {
+  margin-top: 30px;
 }
 @media screen and (max-width: 1364px) {
   .hero-bottom-content .enquire-now {
@@ -92,7 +148,7 @@ body {
 }
 
 .hero-section {
-  padding-top: 200px;
+  padding: 200px 0px 0px 0px;
 }
 @media screen and (max-width: 1414px) {
   .hero-section {
@@ -101,7 +157,7 @@ body {
 }
 @media screen and (max-width: 991px) {
   .hero-section {
-    padding-top: 350px;
+    padding-top: 200px;
   }
 }
 .hero-section .header-stars-pattern {
@@ -124,18 +180,30 @@ body {
   }
 }
 .hero-section .hero-title {
-  font-weight: bold;
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 600;
   color: #113052;
-  font-size: 150px;
-  line-height: 100px;
+  font-size: 100px;
+  line-height: 115px;
   position: relative;
+  width: 100%;
 }
 @media screen and (max-width: 1414px) {
   .hero-section .hero-title {
     font-size: 100px;
+    line-height: 90px;
+  }
+}
+@media screen and (max-width: 1330px) {
+  .hero-section .hero-title {
+    font-size: 79px;
+    line-height: 110px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-section .hero-title {
+    font-size: 104px;
     line-height: 90px;
   }
 }
@@ -168,9 +236,9 @@ body {
 }
 .hero-section .header-pattern {
   position: absolute;
-  top: -580px;
-  right: -620px;
-  width: 1210px;
+  top: -660px;
+  right: -780px;
+  width: 1200px;
 }
 @media screen and (max-width: 1414px) {
   .hero-section .header-pattern {
@@ -231,6 +299,11 @@ body {
     border-bottom-left-radius: 150px;
   }
 }
+@media screen and (max-width: 768px) {
+  .stats-section {
+    padding-bottom: 40px;
+  }
+}
 .stats-section .stats1-parent {
   display: flex;
   align-items: center;
@@ -255,7 +328,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .stats-section .stats1-parent .stats1-child:first-child {
-    padding: 50px 50px;
+    padding: 100px 20px 0px 20px;
   }
 }
 .stats-section .stats1-parent .stats1-child.textual-content h2 {
@@ -336,6 +409,7 @@ body {
 @media screen and (max-width: 768px) {
   .stats-section .stats2-parent .stats2-child:first-child {
     order: 2;
+    padding: 0px;
   }
 }
 .stats-section .stats2-parent .stats2-child.textual-content h2 {
@@ -359,11 +433,11 @@ body {
   .stats-section .stats2-parent .stats2-child .boy {
     position: relative;
     top: 20px;
-    left: -150px;
+    left: -60px;
     transform: none;
   }
 }
-.stats-section .stats2-parent .stats2-child .stats1-cta {
+.stats-section .stats2-parent .stats2-child .stats2-cta {
   padding: 25px 70px;
   font-size: 18px;
   color: #2DCDD6;
@@ -374,11 +448,11 @@ body {
   margin: 20px 0px 0px 0px;
 }
 @media screen and (max-width: 600px) {
-  .stats-section .stats2-parent .stats2-child .stats1-cta {
+  .stats-section .stats2-parent .stats2-child .stats2-cta {
     padding: 15px 30px;
   }
 }
-.stats-section .stats2-parent .stats2-child .stats1-cta:hover {
+.stats-section .stats2-parent .stats2-child .stats2-cta:hover {
   background-color: #2DCDD6;
   color: #113052;
 }
@@ -421,7 +495,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .stats-section .stats3-parent .stats3-child:first-child {
-    padding: 50px 50px;
+    padding: 50px 20px 0px 20px;
   }
 }
 .stats-section .stats3-parent .stats3-child.textual-content h2 {

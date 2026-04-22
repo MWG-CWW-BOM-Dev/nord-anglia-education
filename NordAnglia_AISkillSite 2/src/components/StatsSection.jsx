@@ -6,7 +6,7 @@ import stats2stats from "../assets/stats2-stats.png";
 export default function StatsSection() {
   return (
     <section className="bg-[#072C63] text-white overflow-hidden rounded-bl-[60px] md:rounded-bl-[100px] mt-[-150px] stats-section">
-      <div className="max-w-[100%] mx-auto">
+      <div className="max-w-[1280px] mx-auto">
 
         {/* ===================== ROW 1 ===================== */}
         <div className="stats1-parent">
@@ -25,7 +25,7 @@ export default function StatsSection() {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               className="stats1-cta">
-              Found out more
+              FIND OUT MORE
             </button>
           </div>
 
@@ -75,8 +75,8 @@ export default function StatsSection() {
           <div className="stats3-child textual-content">
             <h2 className=""> We don’t just teach answers. We teach thinking.</h2>
             <p className=""> Our students learn how to reflect, question, and solve problems independently.<br />Through structured “thinking routines” embedded into daily learning, they:</p>
-            <p className=""> • Pause and consider before responding<br />• Explore ideas from multiple perspectives<br />• Explain their thinking clearly</p>
-            <p className="">Simple approaches like “See, think, wonder” encourage deeper thinking every day — building curiosity, resilience, and independence.</p>
+            <p className="">•	Pause and consider before responding<br />•	Explore ideas from multiple perspectives<br />•	Explain their thinking clearly</p>
+            <p className="">Simple approaches like <strong>“See, think, wonder”</strong> encourage deeper thinking every day — building curiosity, resilience, and independence.</p>
             <button
               onClick={() =>
                 document

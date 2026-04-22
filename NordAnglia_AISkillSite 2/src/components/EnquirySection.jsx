@@ -26,9 +26,8 @@ export default function EnquirySection() {
         </h2>
 
         {/* Subtitle */}
-        <p className="mt-3 text-gray-700 text-sm md:text-base leading-6 max-w-[700px]">
-          Fill in your details to find your nearest school and arrange a call
-          with our admissions team.
+        <p className="mt-3 text-gray-700 text-sm md:text-base leading-6">
+          Discover how your child can develop the skills that matter most in today’s and tomorrow’s world.
         </p>
 
         {/* Form Box */}

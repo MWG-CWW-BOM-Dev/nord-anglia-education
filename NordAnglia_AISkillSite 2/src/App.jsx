@@ -13,7 +13,7 @@ function App() {
       <VideoBlock />
       <StatsSection />
       <Info />
-      <CarouselSection />
+      {/* <CarouselSection /> */}
       <EnquirySection />
       {/* <KeepInTouchSection/> */}
 
