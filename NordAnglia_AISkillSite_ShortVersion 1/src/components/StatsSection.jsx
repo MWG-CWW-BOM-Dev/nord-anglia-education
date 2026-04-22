@@ -18,7 +18,15 @@ export default function StatsSection() {
             <p className=""> So the real question isn’t: Can they find the answer?<br />It’s: Can they understand it, challenge it, and use it wisely?</p>
             <p className="">Parents want to know their child will think for themselves, make confident decisions, and thrive - even when there’s no obvious answer.  To have critical thinking skills, great judgement, and the knowledge they’ll thrive in the world they’re living in.</p>
             <p className="">That’s exactly what we develop.</p>
-            <button className="stats1-cta"> READ THE REPORT </button>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("enquiry")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="stats1-cta">
+              Found out more
+            </button>
           </div>
 
           {/* RIGHT IMAGE */}
@@ -69,7 +77,15 @@ export default function StatsSection() {
             <p className=""> Our students learn how to reflect, question, and solve problems independently.<br />Through structured “thinking routines” embedded into daily learning, they:</p>
             <p className=""> • Pause and consider before responding<br />• Explore ideas from multiple perspectives<br />• Explain their thinking clearly</p>
             <p className="">Simple approaches like “See, think, wonder” encourage deeper thinking every day — building curiosity, resilience, and independence.</p>
-            <button className="stats3-cta"> KEEP IN TOUCH </button>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("enquiry")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+
+              className="stats3-cta">
+              KEEP IN TOUCH </button>
           </div>
 
           {/* RIGHT IMAGE */}

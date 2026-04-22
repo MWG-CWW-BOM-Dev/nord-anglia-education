@@ -76,7 +76,13 @@ export default function Hero() {
 
               {/* Button */}
               <div className="mt-10 enquire-now">
-                <button className="bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-semibold tracking-wide hover:scale-105 transition duration-300">
+                <button 
+                onClick={() =>
+                    document
+                      .getElementById("enquiry")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                   className="bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-semibold tracking-wide hover:scale-105 transition duration-300">
                   ENQUIRE NOW
                 </button>
               </div>
