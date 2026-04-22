@@ -19,40 +19,39 @@ export default function CarouselSection() {
   ];
 
   return (
-    <section className="bg-[#1AAFC0] py-16 relative overflow-hidden carousel-section">
-      {/* DOT DESIGN TOP LEFT */}
-      <div className="absolute top-0 left-0 w-[360px] h-[70px]" />
-
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-16 relative z-10">
-        {/* HEADING + ARROWS */}
-        <div className="flex justify-between items-start mb-10">
-          {/* LEFT TEXT */}
+    <section className="bg-[#0D3155] pt-16 pb-8 sm:pt-20 lg:pt-24 relative overflow-hidden ml-[50px]">
+      <div className="max-w-[1320px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between mb-10 sm:mb-14 ">
           <div>
-            <h2 className="text-white text-[42px] font-light uppercase tracking-wide leading-tight">
+            <h2 className="text-white text-[26px] sm:text-[34px] lg:text-[38px] font-light uppercase tracking-wide leading-tight">
               PROVEN IMPACT IN THE CLASSROOM
             </h2>
 
-            <p className="text-white mt-3 text-sm tracking-wide">
+            <p className="text-white mt-4 text-xs sm:text-sm tracking-wide max-w-[760px]">
               Our research with Boston College showed measurable improvements in
-              the skills that matter most
+              the skills that matter most:
             </p>
           </div>
 
-          {/* RIGHT BUTTONS */}
-          <div className="flex gap-3 mt-4">
-            {/* PREV */}
-            <button className="prevBtn w-[46px] h-[46px] rounded-full bg-[#C7D0D6] flex items-center justify-center hover:scale-105 transition">
-              <ArrowLeft size={20} className="text-[#6B7280]" />
+          <div className="flex gap-3 sm:mt-3 sm:mr-2">
+            <button
+              type="button"
+              aria-label="Previous classroom impact card"
+              className="prevBtn w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#D8E4E9] flex items-center justify-center hover:scale-105 transition"
+            >
+              <ArrowLeft size={18} className="text-[#4D6472]" />
             </button>
 
-            {/* NEXT */}
-            <button className="nextBtn w-[46px] h-[46px] rounded-full bg-[#2FE4F3] flex items-center justify-center hover:scale-105 transition">
-              <ArrowRight size={20} className="text-[#0B1E4F]" />
+            <button
+              type="button"
+              aria-label="Next classroom impact card"
+              className="nextBtn w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#31D5DF] flex items-center justify-center hover:scale-105 transition"
+            >
+              <ArrowRight size={18} className="text-[#0D3155]" />
             </button>
           </div>
         </div>
 
-        {/* SLIDER */}
         <Swiper
           modules={[Navigation]}
           navigation={{
@@ -60,25 +59,25 @@ export default function CarouselSection() {
             nextEl: ".nextBtn",
           }}
           loop={true}
-          spaceBetween={18}
-          slidesPerView={1.2}
+          spaceBetween={22}
+          slidesPerView={1.12}
           breakpoints={{
-            640: { slidesPerView: 2.1 },
-            1024: { slidesPerView: 3.2 },
-            1400: { slidesPerView: 4.2 },
+            640: { slidesPerView: 2.05, spaceBetween: 24 },
+            1024: { slidesPerView: 3.05, spaceBetween: 26 },
+            1280: { slidesPerView: 4.05, spaceBetween: 28 },
           }}
         >
           {[...cards, ...cards, ...cards].map((card, i) => (
             <SwiperSlide key={i}>
-              <div className="bg-white rounded-xl overflow-hidden shadow-md">
+              <div className="bg-white rounded-md overflow-hidden shadow-sm">
                 <img
                   src={card.img}
-                  alt="card"
-                  className="w-full h-[250px] object-cover"
+                  alt=""
+                  className="w-full h-[265px] sm:h-[265px] lg:h-[265px] object-cover"
                 />
 
-                <div className="h-[120px] px-6 flex items-center justify-center text-center">
-                  <h3 className="text-black text-[20px] font-semibold leading-tight">
+                <div className="h-[96px] sm:h-[112px] lg:h-[128px] px-5 flex items-center justify-center text-center">
+                  <h3 className="text-black text-[17px] sm:text-[20px] lg:text-[22px] font-semibold leading-tight">
                     {card.title}
                   </h3>
                 </div>
@@ -86,19 +85,6 @@ export default function CarouselSection() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* BUTTON */}
-        {/* <div className="mt-12">
-          <button
-           onClick={() =>
-                    document
-                      .getElementById("enquiry")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-           className="bg-[#0B1E4F] text-white px-10 py-4 rounded-full font-semibold tracking-wide hover:scale-105 transition">
-            FOUND OUT MORE
-          </button>
-        </div> */}
       </div>
     </section>
   );

@@ -16,19 +16,18 @@ export default function EnquirySection() {
   return (
     <section
       id="enquiry"
-      className="bg-[#F5F1E8] py-16 sm:py-24 md:py-32 relative overflow-hidden"
+      className="bg-[#0D3155] rounded-bl-[160px] py-16 sm:py-24 md:py-32 relative overflow-hidden ml-[50px] mb-[200px]"
     >
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 ">
 
         {/* Heading */}
-        <h2 className="text-[#111] text-3xl sm:text-4xl md:text-5xl font-semibold uppercase">
+        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold uppercase">
           Enquire Now
         </h2>
 
         {/* Subtitle */}
-        <p className="mt-3 text-gray-700 text-sm md:text-base leading-6 max-w-[700px]">
-          Fill in your details to find your nearest school and arrange a call
-          with our admissions team.
+        <p className="mt-3 text-white text-sm md:text-base leading-6 max-w-[700px]">
+         Discover how your child can develop the skills that matter most in today’s and tomorrow’s world.
         </p>
 
         {/* Form Box */}
@@ -49,7 +48,7 @@ export default function EnquirySection() {
               ></iframe>
             </p>
           </div>
-
+      
         </div>
       </div>
     </section>
