@@ -22,6 +22,25 @@ const __dirname = path.dirname(__filename);
   // Wait for React to render into the root div
   await page.waitForSelector('#root > *');
   
+  // Clean up dynamically injected trackers from GTM during prerender, but KEEP GTM and React
+  await page.evaluate(() => {
+    const scripts = document.querySelectorAll('script');
+    scripts.forEach(script => {
+      // Remove third-party scripts injected by GTM during puppeteer run
+      if (script.src && (script.src.includes('bat.js') || script.src.includes('analytics.js') || script.src.includes('web-vitals'))) {
+        script.remove();
+      } else {
+        // For the remaining scripts (GTM, React bundle), add a prettier-ignore comment
+        // so Prettier doesn't format the minified JS into 17k lines
+        script.insertAdjacentHTML('beforebegin', '\n<!-- prettier-ignore -->\n');
+      }
+    });
+    
+    // Remove noscript iframe injected by GTM if any duplication happened
+    const noscripts = document.querySelectorAll('noscript iframe');
+    noscripts.forEach(iframe => iframe.parentElement?.remove());
+  });
+  
   const prettier = (await import('prettier')).default || await import('prettier');
   let html = await page.content();
   await browser.close();
