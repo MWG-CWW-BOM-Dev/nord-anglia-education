@@ -1,4 +1,4 @@
-import videoSrc from "../assets/video.mp4";
+import videoSrc from "../assets/12497397_Nord-Anglia_Skills-campaign_1m-20s_1280x720.mp4";
 import thumbnailSrc from "../assets/thumbnail.png";
 import videoPattern from "../assets/video-pattern.png";
 

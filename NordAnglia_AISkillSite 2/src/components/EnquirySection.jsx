@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Info from "./info";
 
 export default function EnquirySection() {
   useEffect(() => {
@@ -16,25 +17,26 @@ export default function EnquirySection() {
   return (
     <section
       id="enquiry"
-      className="bg-[#F5F1E8] py-16 sm:py-24 md:py-32 relative overflow-hidden"
+      className="bg-[#2DCDD6] py-16 sm:py-24 md:py-32 relative overflow-hidden"
     >
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8">
+      <Info />
+      <div className="max-w-[1280px] mx-auto deskpd">
 
         {/* Heading */}
-        <h2 className="text-[#111] text-3xl sm:text-4xl md:text-5xl font-semibold uppercase">
+        <h2 className="text-[#111] text-3xl sm:text-4xl uppercase">
           Enquire Now
         </h2>
 
         {/* Subtitle */}
         <p className="mt-3 text-gray-700 text-sm md:text-base leading-6">
-          Discover how your child can develop the skills that matter most in today’s and tomorrow’s world.
+          Discover how your child can develop the skills that matter most in today’s and<br className="brremove"/> tomorrow’s world.
         </p>
 
         {/* Form Box */}
         <div className="mt-8 md:mt-10 bg-white rounded-[22px] md:rounded-[28px] shadow-md overflow-hidden">
 
           {/* Iframe Form */}
-          <div className="p-4 sm:p-6 md:p-8">
+          <div className="p-4 sm:p-6 md:p-8" id="enquiryform">
             <p>
               <iframe
                 title="Admissions Form"

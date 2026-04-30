@@ -13,10 +13,10 @@ export default function Hero() {
         <header>
           <div className="flex items-center justify-between">
             <img src={logo} alt="Logo" />
-            <button className="bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-medium tracking-wide transition duration-300"
+            <button className="findbtn bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-medium tracking-wide transition duration-300"
               onClick={() =>
                 document
-                  .getElementById("enquiry")
+                  .getElementById("enquiryform")
                   ?.scrollIntoView({ behavior: "smooth" })
               }>FIND A SCHOOL</button>
           </div>
@@ -51,25 +51,24 @@ export default function Hero() {
             <div className="bg-[#30CDD6] rounded-br-[120px] absolute z-0 bottom-[50px] w-[90%] hero-bottom-content">
 
               {/* Heading */}
-              <h3 className="text-white font-light uppercase tracking-wide text-[20px] sm:text-[28px] md:text-[38px] lg:text-[30px] leading-[1.15] mb-8">
+              <h3 className="text-white font-light uppercase tracking-wide text-[20px] sm:text-[28px] md:text-[38px] lg:text-[30px] leading-[1.15] mb-6">
                 In a world full of AI answers, will your child learn to think?
               </h3>
 
               {/* Content Grid */}
-              <div className="grid md:grid-cols-2 gap-8 lg:gap-12 text-[#08306a] text-[15px] md:text-[18px] leading-8">
+              <div className="grid md:grid-cols-1 gap-8 lg:gap-6 text-[#08306a] text-[15px] md:text-[18px] leading-8">
 
                 {/* Left Text */}
-                <p>Artificial intelligence is transforming how we learn, work, and solve problems. Answers are faster, easier, and everywhere.<br />
-                  But when answers are instant, something else matters more than ever: your child’s ability to think independently, question deeply, and adapt with confidence.<br /><br />
-                  At Nord Anglia Education, this isn’t just theory. It’s what we know works.
+                <p>Artificial intelligence is transforming how we learn, work, and solve problems. Answers are faster, easier, and<br className="brremove"></br> everywhere. But when answers are instant, something else matters more than ever: your child’s ability to think<br className="brremove"></br> independently, question deeply, and adapt with confidence.
                 </p>
+                <p>At Nord Anglia Education, this isn’t just theory. It’s what we know works.</p>
 
                 {/* Right Text */}
                 <p>
-                  We partnered with <strong>Boston College</strong> on a <strong> two-year global research project involving over 12,000 of our students</strong> to understand how children develop the skills they need for the future.
+                  We partnered with <strong>Boston College</strong> on a <strong> two-year global research project involving over 12,000 of our students</strong><br className="brremove"></br> to understand how children develop the skills they need for the future.
                   <br /><br />
                   The results showed clear, measurable growth in the skills AI
-                  can’t replicate. <a href="#" className="font-bold text-[#113052] underline hover:text-[#FFFFFF] transition" > Find out more here </a>
+                  can’t replicate. 
                 </p>
               </div>
 
@@ -78,11 +77,11 @@ export default function Hero() {
                 <button
                   onClick={() =>
                     document
-                      .getElementById("enquiry")
+                      .getElementById("enquiryform")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-semibold tracking-wide transition duration-300">
-                  ENQUIRE NOW
+                  className="findbtn bg-[#082c63] text-white px-10 md:px-14 py-4 rounded-full text-sm md:text-base font-semibold tracking-wide transition duration-300">
+                  FIND OUT MORE
                 </button>
               </div>
             </div>
