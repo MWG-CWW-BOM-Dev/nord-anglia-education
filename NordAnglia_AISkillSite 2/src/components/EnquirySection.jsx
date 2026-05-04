@@ -20,7 +20,7 @@ export default function EnquirySection() {
       className="bg-[#2DCDD6] py-16 sm:py-24 md:py-32 relative overflow-hidden"
     >
       <Info />
-      <div className="max-w-[1280px] mx-auto deskpd">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8">
 
         {/* Heading */}
         <h2 className="text-[#111] text-3xl sm:text-4xl uppercase">

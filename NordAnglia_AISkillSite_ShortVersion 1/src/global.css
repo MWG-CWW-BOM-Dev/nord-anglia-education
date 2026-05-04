@@ -97,16 +97,9 @@ header img {
 }
 @media screen and (max-width: 600px) {
   .hero-bottom-content h3 {
+    margin-bottom: 20px;
     font-size: 15px;
     line-height: 20px;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (max-width: 390px) {
-  .hero-bottom-content h3 {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -131,12 +124,6 @@ header img {
     line-height: 15px;
   }
 }
-@media screen and (max-width: 390px) {
-  .hero-bottom-content .grid p {
-    font-size: 11px;
-    line-height: 14px;
-  }
-}
 .hero-bottom-content .enquire-now {
   margin-top: 30px;
 }
@@ -152,13 +139,6 @@ header img {
   .hero-bottom-content .enquire-now button {
     font-size: 15px;
     padding: 10px 20px;
-  }
-}
-@media screen and (max-width: 1125px) and (max-width: 390px) {
-  .hero-bottom-content .enquire-now button {
-    font-size: 12px;
-    padding: 10px 20px;
-    font-weight: 400;
   }
 }
 @media screen and (max-width: 600px) {
@@ -177,7 +157,12 @@ header img {
 }
 @media screen and (max-width: 991px) {
   .hero-section {
-    padding-top: 100px;
+    padding-top: 200px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .hero-section {
+    padding-top: 60px;
   }
 }
 .hero-section .header-stars-pattern {
@@ -205,7 +190,7 @@ header img {
   font-weight: 600;
   color: #113052;
   font-size: 100px;
-  line-height: 115px;
+  line-height: 146px;
   position: relative;
   width: 100%;
 }
@@ -328,7 +313,7 @@ header img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25% 0px 0px 0px;
+  padding: 17% 0px 0px 0px;
 }
 @media screen and (max-width: 768px) {
   .stats-section .stats1-parent {
@@ -357,6 +342,7 @@ header img {
   text-transform: uppercase;
   line-height: 40px;
   margin-bottom: 30px;
+  color: #2DCDD6;
 }
 @media screen and (max-width: 600px) {
   .stats-section .stats1-parent .stats1-child.textual-content h2 {
@@ -368,7 +354,7 @@ header img {
   }
 }
 .stats-section .stats1-parent .stats1-child.textual-content p {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .stats-section .stats1-parent .stats1-child img {
   position: absolute;
@@ -388,12 +374,14 @@ header img {
 .stats-section .stats1-parent .stats1-child .stats1-cta {
   padding: 25px 70px;
   font-size: 18px;
-  color: #2DCDD6;
+  color: #113052;
   border: solid 1px #2DCDD6;
   border-radius: 100px;
   font-weight: 500;
   cursor: pointer;
   margin: 20px 0px 0px 0px;
+  background: #F9F5EC;
+  font-weight: bold;
 }
 @media screen and (max-width: 600px) {
   .stats-section .stats1-parent .stats1-child .stats1-cta {
@@ -413,6 +401,7 @@ header img {
 @media screen and (max-width: 768px) {
   .stats-section .stats2-parent {
     flex-wrap: wrap;
+    padding: 100px 20px 0px 20px;
   }
 }
 .stats-section .stats2-parent .stats2-child {
@@ -438,9 +427,10 @@ header img {
   text-transform: uppercase;
   line-height: 40px;
   margin-bottom: 30px;
+  color: #2DCDD6;
 }
 .stats-section .stats2-parent .stats2-child.textual-content p {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .stats-section .stats2-parent .stats2-child .boy {
   position: absolute;
@@ -495,7 +485,7 @@ header img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15% 0px 5% 0px;
+  padding: 15% 0px 13% 0px;
 }
 @media screen and (max-width: 768px) {
   .stats-section .stats3-parent {
@@ -523,17 +513,19 @@ header img {
   font-weight: 400;
   text-transform: uppercase;
   line-height: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  color: #2DCDD6;
 }
 .stats-section .stats3-parent .stats3-child.textual-content p {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .stats-section .stats3-parent .stats3-child img {
   position: absolute;
   left: 22%;
   width: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-52%);
+  z-index: 99999;
 }
 @media screen and (max-width: 768px) {
   .stats-section .stats3-parent .stats3-child img {
@@ -566,12 +558,13 @@ header img {
 .info-section {
   background-color: #2DCDD6;
   color: #113052;
-  padding: 5% 5% 4% calc(100% - 80vw);
+  padding: 6% 5% 6% calc(100% - 90vw);
   border-bottom-right-radius: 200px;
   position: relative;
   overflow: hidden;
-  max-width: 92%;
+  max-width: 100%;
   margin-bottom: 50px;
+  margin-top: -160px;
 }
 @media screen and (max-width: 1414px) {
   .info-section {
@@ -593,7 +586,7 @@ header img {
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1.3;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 @media screen and (max-width: 600px) {
@@ -604,8 +597,8 @@ header img {
 }
 .info-section .info-container .info-column p {
   font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 30px;
+  line-height: 1.4;
+  margin-bottom: 20px;
   font-weight: 400;
   max-width: 90%;
 }
@@ -639,6 +632,11 @@ header img {
     max-width: 100%;
   }
 }
+@media screen and (max-width: 500px) {
+  .info-section {
+    padding: 10% 5% 0% 5%;
+  }
+}
 
 .carousel-section {
   overflow: visible;
@@ -668,6 +666,77 @@ header img {
 
 .swiper {
   margin: 60px 0px 0px 0px;
+}
+
+@media (max-width: 900px) {
+  .brremove {
+    display: none;
+  }
+}
+.sectionproven {
+  padding: 160px 0px 100px calc(100% - 80vw);
+}
+.sectionproven h3 {
+  font-size: 31px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+.sectionproven p {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  .sectionproven p {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sectionproven {
+    padding: 100px 20px 80px 20px;
+  }
+}
+.sectionproven .provenimg {
+  padding: 40px 0px 20px 0px;
+  width: 94%;
+  margin: 0 auto;
+}
+.sectionproven .endtext {
+  font-size: 24px;
+  text-align: center;
+  color: #2DCDD6;
+  padding: 20px 0px 35px 0px;
+}
+@media screen and (max-width: 768px) {
+  .sectionproven .endtext {
+    font-size: 22px;
+    text-align: left;
+    padding: 30px;
+  }
+}
+
+section#enquiry {
+  border-bottom-right-radius: 200px;
+  margin-top: -160px;
+}
+@media screen and (max-width: 768px) {
+  section#enquiry {
+    margin-top: -270px;
+  }
+}
+@media screen and (max-width: 500px) {
+  section#enquiry {
+    border-bottom-right-radius: 100px;
+    padding-bottom: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  section#enquiry {
+    margin-top: -200px;
+  }
+}
+
+.findbtn:hover {
+  background-color: #fff;
+  color: #113052;
 }
 
 /*# sourceMappingURL=global.css.map */
